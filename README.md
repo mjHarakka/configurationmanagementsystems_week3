@@ -17,9 +17,8 @@ https://guides.github.com/features/mastering-markdown/
 ## Examples of different git commands
 
 ### gitlog
-![git log](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitlog.png)
 This shows the different commits with the accompanying hashcode for each commit made
-
+![git log](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitlog.png)
 ### gitdiff hash1 hash2
 This command shows the difference between 2 files/commits as can be seen on the image below. Also it's enough to only write the first 4 characters of the hashcode of a particular log, git will still udnerstand which one is which.
 ![git diff](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitdiff.png)
@@ -47,10 +46,9 @@ The configuration file is just a default one I found on github. Nothing special,
   file.managed:
     - source: salt://vimrc
 
-Next I ran the command "sudo salt '*' state.apply vim" one more time and this is the resul:
+Next I ran the command "sudo salt '*' state.apply vim" one more time and this is the result:
 
 ![vim salt](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/vim.png)
 
-So atleast there was no bugs in applying the state, but after inspection I found out that the configuration file ~/.vimrc did not exist.
-
+So atleast there was no bugs in applying the state, but after inspection I found out that the configuration file ~/.vimrc did not exist. I really scratched my head on this one, I just could not figure out why was there not a proper configuration file on my home folder.
 

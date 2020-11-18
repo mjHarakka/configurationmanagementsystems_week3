@@ -16,6 +16,13 @@ https://guides.github.com/features/mastering-markdown/
 
 ## Examples of different git commands
 
+### gitlog
 ![git log](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitlog.png)
+This shows the different commits with the accompanying hashcode for each commit made
+
+### gitdiff <hash1> <hash2>
+This command shows the difference between 2 files/commits as can be seen on the image below. Also it's enough to only write the first 4 characters of the hashcode of a particular log, git will still udnerstand which one is which.
 ![git diff](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitdiff.png)
+### gitblame 
 ![git blame](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitblame.png)
+![git reset](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitreset.png)

@@ -13,3 +13,9 @@ This weeks exercises were mostly about Git version control and Github, these exe
 1. Run the command "git push -u origin master" to push the change to the origina (github repository)
 
 https://guides.github.com/features/mastering-markdown/
+
+## Examples of different git commands
+
+![git log](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitlog.png)
+![git diff](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitdiff.png)
+![git blame](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitblame.png)

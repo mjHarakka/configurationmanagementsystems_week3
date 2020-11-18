@@ -1,4 +1,4 @@
-# Configuration Mangament System's week3's exercises
+# Configuration Mangament Systems week3's exercises
 ## First Steps - Creating new Repository and pushing the changes from local machine to remote repository in github
 
 This weeks exercises were mostly about Git version control and Github, these exercises are made with markdown
@@ -29,3 +29,28 @@ Shows the individual contributors of each specific line on the file
 ### git reset --hard
 Reset's/clears the staging area of added files to the latest revision that is committed as can be seen on example.
 ![git reset](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/gitreset.png)
+
+## Creating new salt-module
+
+For this one I decided to create a new salt state that installs vim for example on a new server installation and also adds a vimrc file on the ~/.vimrc path that has non-default vim configuration.
+
+I added the file "vim.sls" to the /srv/sal -folder with the following code:
+
+vim:
+  pkg:
+    - installed
+
+After testing it and seeing that the installation had gone through, I also added the following for configuring the VIM.
+The configuration file is just a default one I found on github. Nothing special, you can for example specify different VIM themes on the configuration file. This is the one I used: https://gist.githubusercontent.com/simonista/8703722/raw/d08f2b4dc10452b97d3ca15386e9eed457a53c61/.vimrc
+
+/.vimrc:
+  file.managed:
+    - source: salt://vimrc
+
+Next I ran the command "sudo salt '*' state.apply vim" one more time and this is the resul:
+
+![vim salt](https://github.com/mjHarakka/configurationmanagementsystems_week3/blob/master/images/vim.png)
+
+So atleast there was no bugs in applying the state, but after inspection I found out that the configuration file ~/.vimrc did not exist.
+
+
